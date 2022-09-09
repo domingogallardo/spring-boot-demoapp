@@ -11,12 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class SaludoControllerPlantilla {
 
-    private final SaludoService service;
-
     @Autowired
-    public SaludoControllerPlantilla(SaludoService service) {
-        this.service = service;
-    }
+    private SaludoService service;
 
     @RequestMapping("/saludoplantilla/{nombre}")
     public String saludo(@PathVariable(value="nombre") String nombre, Model model) {

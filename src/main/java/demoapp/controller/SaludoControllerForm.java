@@ -12,12 +12,8 @@ import javax.validation.Valid;
 @Controller
 public class SaludoControllerForm {
 
-    private final SaludoService service;
-
     @Autowired
-    public SaludoControllerForm(SaludoService service) {
-        this.service = service;
-    }
+    private SaludoService service;
 
     @GetMapping("/saludoform")
     // Hay que declarar un parámetro con el tipo usado en el modelo del formulario (UserData)
